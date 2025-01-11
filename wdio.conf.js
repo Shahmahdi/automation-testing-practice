@@ -1,3 +1,5 @@
+import path from "path";
+
 export const config = {
     //
     // ====================
@@ -23,6 +25,7 @@ export const config = {
     //
     specs: [
         // ToDo: define location for spec files here
+        "./test/specs/**/*.js"
     ],
     // Patterns to exclude.
     exclude: [
@@ -51,12 +54,11 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-        browserName: 'Chrome',
-        'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
+        "appium:platformName": "Android",
+        "appium:platformVersion": "14.0",
+        "appium:deviceName": "Pixel 7",
+        "appium:automationName": "UIAutomator2",
+        "appium:app": path.join(process.cwd(), "app/android/ApiDemos-debug.apk")
     }],
 
     //
