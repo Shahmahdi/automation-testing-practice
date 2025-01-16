@@ -1,5 +1,6 @@
 {
-  "name": "webDriverIO-appium",
+  "name": "webdriver-io-appium",
+  "author": "Shah Arfan Mahdi",
   "type": "module",
   "devDependencies": {
     "@wdio/appium-service": "^9.5.4",
